@@ -47,3 +47,7 @@ vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "Paste from system cli
 
 -- Clear search highlight
 vim.keymap.set("n", "<C-c>", "<cmd>nohlsearch<cr>", { desc = "Clear search highlight" })
+
+-- Paste over visual selection without overwriting the register
+-- This deletes the selection into the black hole register ("_d) before pasting (P)
+vim.keymap.set("x", "p", [["_dP]], { desc = "Paste without overwriting register" })
