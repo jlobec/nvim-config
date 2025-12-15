@@ -5,7 +5,7 @@
 local opts = { silent = true }
 
 -- Back to normal mode
-vim.keymap.set({ "i", "t" }, "jk", "<ESC>", opts)
+vim.keymap.set({ "i", "t", "v" }, "jk", "<ESC>", opts)
 
 -- New tab
 vim.keymap.set("n", "te", ":tabedit")
